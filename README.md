@@ -7,7 +7,7 @@ Henry He and Xiaoke Luo
 
 ## statement of problem
 
-Find a legal path from a starting point to treasure.
+Find a legal travel path from a starting point to treasure.
 
 legal
  * no crossing walls
