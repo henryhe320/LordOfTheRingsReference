@@ -19,6 +19,9 @@ legal
 Finds a legal path from the position I ended up in my last step to the treasure.
 
 ## base case
+
+If the current position is at the treasure, there is a solution
+
 ## english or pseudocode description of algorithm
 ## class(es), with fields and methods
 ## version*n* wish list
