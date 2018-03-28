@@ -29,7 +29,15 @@ for each direction (up, right, down, left, in that order):
  * take a step back
  
 ## class(es), with fields and methods
-*Class: Solver
-**ff
-*Class:Maze
+ * Class: Solver
+ * Maze Field
+ * An Arraylist of Maze Field
+ * SolutionFinderForMaze Method
+
+
+ * Class:Maze
+ * BlockedPath 2d-Array Field
+ * isValid Method
+ * treasureReached method
+ *
 ## version*n* wish list
