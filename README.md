@@ -47,4 +47,4 @@ for each direction (up, right, down, left, in that order):
  * isValid Method
  * treasureReached method
  * toString method
-## version*n* wish list
+## version *n* wish list
