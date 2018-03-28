@@ -29,4 +29,7 @@ for each direction (up, right, down, left, in that order):
  * take a step back
  
 ## class(es), with fields and methods
+*Class: Solver
+**ff
+*Class:Maze
 ## version*n* wish list
