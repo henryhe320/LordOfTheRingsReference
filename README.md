@@ -23,5 +23,10 @@ Finds a legal path from the position I ended up in my last step to the treasure.
 If the current position is at the treasure, there is a solution
 
 ## english or pseudocode description of algorithm
+
+for each direction (up, right, down, left, in that order):
+ * if the next step in that direction is legal, take a step in that direction and call the recursive abstraction
+ * take a step back
+ 
 ## class(es), with fields and methods
 ## version*n* wish list
