@@ -27,6 +27,8 @@ If the current position is at the treasure, there is a solution
 for each direction (up, right, down, left, in that order):
  * if the next step in that direction is legal, take a step in that direction and call the recursive abstraction
  * take a step back
+ * Recursive backtracking tries the following directions (should not do this if previous step isLegal)
+ * Should not take a step in the opposite direction if legal.
  
 ## class(es), with fields and methods
  * Class: Solver
@@ -36,8 +38,13 @@ for each direction (up, right, down, left, in that order):
 
 
  * Class:Maze
- * BlockedPath 2d-Array Field
+ * BlockedYcor Array Field
+ * BlockedXcor Array Field
+ * VerticalDistanceTraveled or ycor Field
+ * HorizontalDistanceTravelel or xcor Field
+ * advance method
+ * backtrack method
  * isValid Method
  * treasureReached method
- *
+ * toString method
 ## version*n* wish list
