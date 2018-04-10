@@ -75,9 +75,9 @@ public class Maze {
         }
         
         explorerPosition = new Vector().add( explorerRank, explorerFile);
-        // // for debugging: report explorer's location
-        // System.out.println( "explorer at " + explorerPosition.rank
-                          // + ", " +           explorerPosition.file);
+         // for debugging: report explorer's location
+         System.out.println( "explorer at " + explorerPosition.rank
+                           + ", " +           explorerPosition.file);
     }
 
 
@@ -86,21 +86,21 @@ public class Maze {
       Deep copy of all instance fields.
      */
     public Maze( Maze old) {
-	maze = new int[ MAX_RANKS][];
 
         // Copy the explorer's position (code by Holmes is asserted to work)
         explorerPosition = new Vector( old.explorerPosition);
 
-
-	rankCount = old.rankCount;
-	for(int rank = 0; rank <  old.rankCount; rank++){
-	    maze[rank][] = new int[old.maze[rank].length];
-	    for (int file = 0; file < old.maze[rank].length; file++){
-		maze[rank][file] = old.maze[rank][file];
-	    }
-	}
-
-	    
+//        throw new java.lang.RuntimeException(
+//            "Write code to copy the maze[][] array and rankCount.");
+        
+        maze = new int[ MAX_RANKS][];
+        rankCount = old.rankCount;
+        for( int rank = 0; rank < rankCount; rank++){
+            maze[rank] = new int[ old.maze[rank].length];
+            for( int file = 0; file < old.maze[rank].length; file++){
+                maze[rank][file] = old.maze[rank][file];
+            }
+        }
     }
 
 

@@ -22,16 +22,16 @@ public class UserOfMaze {
                             );
         System.out.println( maze + System.lineSeparator());
 
-	//moveTest( maze);
-	// dropTest( maze);
+//         moveTest( maze);
+//         dropTest( maze);
 
-         copyConstructTest( maze);
-
-        // //test Displayer
-        // displayer = new Displayer( Integer.parseInt( commandLine[3]));
-        // displayerTest( maze);
-
-        // snapshotDemo( maze);
+//         copyConstructTest( maze);
+//
+//         // test Displayer
+//         displayer = new Displayer( Integer.parseInt( commandLine[3]));
+//         displayerTest( maze);
+//
+         snapshotDemo( maze);
     }
 
 
@@ -156,17 +156,22 @@ public class UserOfMaze {
 
         Maze snapshot;
 
-        throw new java.lang.RuntimeException(
-            "Write code to take a snapshot of @candidate. "
-          + "Then, in @candidate, have the explorer go() out of the maze.");
+//        throw new java.lang.RuntimeException(
+//            "Write code to take a snapshot of @candidate. "
+//          + "Then, in @candidate, have the explorer go() out of the maze.");
+        
+        snapshot = new Maze( candidate);
+        candidate.go(Maze.WEST);
+        candidate.go(Maze.WEST);
+//        candidate.go(Maze.WEST);
 
-        // System.out.println(
-                            // "modified candidate with no explorer"
-                          // + System.lineSeparator()
-                          // + candidate + System.lineSeparator()
-                          // + "unchanged snapshot" + System.lineSeparator()
-                          // + snapshot + System.lineSeparator()
-                          // );
+         System.out.println(
+                             "modified candidate with no explorer"
+                           + System.lineSeparator()
+                           + candidate + System.lineSeparator()
+                           + "unchanged snapshot" + System.lineSeparator()
+                           + snapshot + System.lineSeparator()
+                           );
 
         /* Expecting...
               modified candidate with no explorer
@@ -180,15 +185,17 @@ public class UserOfMaze {
               ------
          */
 
-        // throw new java.lang.RuntimeException(
-            // "Write code to undo the go() by making @candidate refer "
-          // + "to an unchanged copy of the maze.");
+//         throw new java.lang.RuntimeException(
+//             "Write code to undo the go() by making @candidate refer "
+//           + "to an unchanged copy of the maze.");
+        
+        candidate = new Maze(snapshot);
 
-        // System.out.println(
-                            // "restored candidate, with an explorer"
-                          // + System.lineSeparator()
-                          // + candidate + System.lineSeparator()
-                          // );
+         System.out.println(
+                             "restored candidate, with an explorer"
+                           + System.lineSeparator()
+                           + candidate + System.lineSeparator()
+                           );
         /* Expecting...
               restored candidate, with an explorer
               ------
