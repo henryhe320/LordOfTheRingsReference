@@ -16,11 +16,12 @@ legal
 
 ## recursive abstraction
 
-Finds a legal path from the position I ended up in my last step to the treasure.
+When we are asked to determine if there is a legal travel path from explorer's current position to treasure, the recursive abstraction can determine if there is a legal travel path from explorer's current position to treasure after I take a legal step"
 
 ## base case
 
-If the current position is at the treasure, there is a solution
+If the current position is at the treasure, return true
+If the current position is at a wall return false
 
 ## english or pseudocode description of algorithm
 
