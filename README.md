@@ -1,6 +1,6 @@
 # LordOfTheRingsReference
 
-Returns the Boolean value of the statement “the maze is navigable, having a legal travel path that is continuous from start point to existing treasure”
+Returns the Boolean value of the statement “the maze is navigable, having a legal travel path that is continuous from explorer's current position to treasure”
 
 ## personnel
 Henry He and Xiaoke Luo
