@@ -18,6 +18,8 @@ public class MazeSolver{
 		snapShot = new Maze(inProgress);
 		inProgress.go(i);
 		if(inProgress.exlorerIsOnA() == inProgress.STEPPING_STONE){
+			//drop a wall?
+		    //recursive abstraction
 		}
 		inProgress = snapShot;
 	    }
