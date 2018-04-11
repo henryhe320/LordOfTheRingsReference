@@ -25,11 +25,10 @@ If the current position is at a wall return false
 
 ## english or pseudocode description of algorithm
 
-for each direction (up, right, down, left, in that order):
- * if the next step in that direction is legal, take a step in that direction and call the recursive abstraction
- * if path in that direction doesn't work, take a step back
+for each direction (N, E, S, W, in that order):
+ * take a step in that direction and if the step is legal, call the recursive abstraction
+ * if the step is not legal, take a step back (restore snapshot)
  * Recursive backtracking tries the following directions (should do this even if previous step isLegal)
- * Should not take a step in the opposite direction if legal.
  
 ## class(es), with fields and methods
  * Class: Solver
@@ -41,11 +40,11 @@ for each direction (up, right, down, left, in that order):
  * Class:Maze
  * BlockedYcor Array Field
  * BlockedXcor Array Field
- * VerticalDistanceTraveled or ycor Field
- * HorizontalDistanceTravelel or xcor Field
  * advance method
  * backtrack method
  * isValid Method
  * treasureReached method
  * toString method
 ## version *n* wish list
+
+## known bugs
