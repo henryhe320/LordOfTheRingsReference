@@ -10,10 +10,10 @@ public class MazeSolver{
     Maze inProgress;
     Maze snapShot;
 
-    public MazeSolver{
-	Maze inProgress = new Maze( commandLine[0]
-				    , Integer.parseInt( commandLine[1])
-				    , Integer.parseInt( commandLine[2]));
+    public MazeSolver(String sourceFilename
+		      , int explorerRank, int explorerFile){
+	Maze inProgress = new Maze(sourceFilename, explorerRank, explorerFile);
+	solver();
     }
 
     
