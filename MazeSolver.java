@@ -23,6 +23,7 @@ public class MazeSolver{
 		}
 		inProgress = snapShot;
 	    }
-		 
+	return navigable;
+		
     }
 }
