@@ -7,30 +7,31 @@
 
 public class MazeSolver{
     
-    Boolean navigable;
-    Maze inProgress;
-    Maze snapShot;
+    private static Boolean navigable;
 
-    public MazeSolver(String sourceFilename
-		      , int explorerRank, int explorerFile){
-	Maze inProgress = new Maze(sourceFilename, explorerRank, explorerFile);
-	solver();
-    }
+//    public MazeSolver(String sourceFilename
+//		      , int explorerRank, int explorerFile){
+//	Maze inProgress = new Maze(sourceFilename, explorerRank, explorerFile);
+//	solver();
+//    }
 
 //    public String toString(){
 //        return (String)solver();
 //    }
 
-    public Boolean solver(){
+    public static Boolean solver(Maze inProgress){
         if (inProgress.explorerIsOnA() == inProgress.TREASURE)
             navigable = true;
+        else if (inProgress.explorerIsOnA() == inProgress.WALL)
+            navigable = false;
         else{
+            Maze snapShot = new Maze(inProgress);
             for(int i = 1; i < 9; i = i * 2){
-                snapShot = new Maze(inProgress);
                 inProgress.dropA(inProgress.WALL);
                 inProgress.go(i);
                 if(inProgress.explorerIsOnA() == inProgress.STEPPING_STONE){
-                    solver();
+                    System.out.println("step successful");
+                    solver(inProgress);
                 }
                 inProgress = snapShot;
             }
