@@ -16,10 +16,10 @@ public class MazeSolver{
 	else{
 	    for(int i = 1; i < 9; i * 2){
 		snapShot = new Maze(inProgress);
+		inProgress.dropA(inProgress.WALL);
 		inProgress.go(i);
 		if(inProgress.exlorerIsOnA() == inProgress.STEPPING_STONE){
-			//drop a wall?
-		    //recursive abstraction
+		    solver();
 		}
 		inProgress = snapShot;
 	    }
