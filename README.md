@@ -32,19 +32,20 @@ for each direction (N, E, S, W, in that order):
  
 ## class(es), with fields and methods
  * Class: Solver
- * Maze Field
- * An Arraylist of Maze Field
- * SolutionFinderForMaze Method
+ * inProgress Maze Field
+ * snapShot Maze Field
+ * solver Method
+ * toString()
 
 
  * Class:Maze
- * BlockedYcor Array Field
- * BlockedXcor Array Field
- * advance method
- * backtrack method
- * isValid Method
- * treasureReached method
+ * 2D Maze Array
+ * advance method (i.e go)
+ * backtrack method (i.e copyconstructor and restoration of a snapshot)
  * toString method
 ## version *n* wish list
+
+ * display actual path
+ * perhaps find multiple solutions
 
 ## known bugs
