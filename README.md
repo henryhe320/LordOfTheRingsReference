@@ -49,3 +49,4 @@ for each direction (N, E, S, W, in that order):
  * perhaps find multiple solutions
 
 ## known bugs
+ * UserOfMazeSolver won't compile
