@@ -6,6 +6,7 @@
  */
 
 public class MazeSolver{
+    
     Boolean navigable;
     Maze inProgress;
     Maze snapShot;
@@ -16,22 +17,24 @@ public class MazeSolver{
 	solver();
     }
 
-    
+//    public String toString(){
+//        return (String)solver();
+//    }
 
-    private Boolean solver(){
-	if (inProgress.explorerIsOnA == inProgress.TREASURE)
-	    navigable = true;
-	else{
-	    for(int i = 1; i < 9; i * 2){
-		snapShot = new Maze(inProgress);
-		inProgress.dropA(inProgress.WALL);
-		inProgress.go(i);
-		if(inProgress.exlorerIsOnA() == inProgress.STEPPING_STONE){
-		    solver();
-		}
-		inProgress = snapShot;
-	    }
-	return navigable;
-		
+    public Boolean solver(){
+        if (inProgress.explorerIsOnA() == inProgress.TREASURE)
+            navigable = true;
+        else{
+            for(int i = 1; i < 9; i = i * 2){
+                snapShot = new Maze(inProgress);
+                inProgress.dropA(inProgress.WALL);
+                inProgress.go(i);
+                if(inProgress.explorerIsOnA() == inProgress.STEPPING_STONE){
+                    solver();
+                }
+                inProgress = snapShot;
+            }
+        }
+        return navigable;
     }
 }
