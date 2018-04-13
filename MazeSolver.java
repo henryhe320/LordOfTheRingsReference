@@ -20,15 +20,15 @@ public class MazeSolver{
 
     public static Boolean solver(){
 //        inProgress.explorerIsOnA();
-        return inProgress.explorerIsOnA() == Maze.TREASURE;
+//        return inProgress.explorerIsOnA() == Maze.TREASURE;
         
         if (inProgress.explorerIsOnA() == Maze.TREASURE)
             return true;
         else if (inProgress.explorerIsOnA() == Maze.WALL)
             return false;
         else{
-            Maze snapshot = new Maze(inProgress);
             for(int dir: directions) {
+                Maze snapshot = new Maze(inProgress);
                 inProgress.dropA(inProgress.WALL);
                 inProgress.go(dir);
                 if (inProgress.explorerIsOnA() == Maze.STEPPING_STONE){
