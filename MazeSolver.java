@@ -7,35 +7,33 @@
 
 public class MazeSolver{
     
-    private static Boolean navigable;
+    //private static Boolean navigable;
+    
+    private Maze inProgress;
+    
+    private int[] directions;
 
-//    public MazeSolver(String sourceFilename
-//		      , int explorerRank, int explorerFile){
-//	Maze inProgress = new Maze(sourceFilename, explorerRank, explorerFile);
-//	solver();
-//    }
+    public MazeSolver(Maze maze){
+        Maze inProgress = new Maze(maze);
+        directions = new int[] {Maze.NORTH, Maze.EAST, Maze.SOUTH, Maze.WEST};
+    }
 
-//    public String toString(){
-//        return (String)solver();
-//    }
-
-    public static Boolean solver(Maze inProgress){
-        if (inProgress.explorerIsOnA() == inProgress.TREASURE)
-            navigable = true;
-        else if (inProgress.explorerIsOnA() == inProgress.WALL)
-            navigable = false;
+    public static Boolean solver(){
+        if (inProgress.explorerIsOnA() == Maze.TREASURE)
+            return true;
+        else if (inProgress.explorerIsOnA() == Maze.WALL)
+            return false;
         else{
-            Maze snapShot = new Maze(inProgress);
-            for(int i = 1; i < 9; i = i * 2){
+            Maze snapshot = new Maze(inProgress);
+            for(int dir: directions) {
                 inProgress.dropA(inProgress.WALL);
-                inProgress.go(i);
-                if(inProgress.explorerIsOnA() == inProgress.STEPPING_STONE){
-                    System.out.println("step successful");
-                    solver(inProgress);
+                inProgress.go(dir);
+                if (inProgress.explorerIsOnA() == Maze.STEPPING_STONE){
+//                    System.out.println("step successful");
+                    return solver();
                 }
-                inProgress = snapShot;
+                inProgress = snapshot;
             }
         }
-        return navigable;
     }
 }
