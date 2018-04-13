@@ -26,11 +26,17 @@ public class UserOfMazeSolver {
                             , Integer.parseInt( commandLine[1])
                             , Integer.parseInt( commandLine[2])
                             );
-       if (MazeSolver.solver(test)){
-           System.out.println("maze has a solution");
-       } else {
-           System.out.println("maze has no solution");
-       }
+        
+        MazeSolver testSolve =  new MazeSolver(test);
+        
+           testSolve.solver();
+           
+
+        if (testSolve.solver()){
+            System.out.println("maze has a solution");
+        } else {
+            System.out.println("maze has no solution");
+        }
            
            
     }

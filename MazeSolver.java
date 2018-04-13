@@ -9,9 +9,9 @@ public class MazeSolver{
     
     //private static Boolean navigable;
     
-    private Maze inProgress;
+    private static Maze inProgress;
     
-    private int[] directions;
+    private static int[] directions;
 
     public MazeSolver(Maze maze){
         Maze inProgress = new Maze(maze);
@@ -19,6 +19,9 @@ public class MazeSolver{
     }
 
     public static Boolean solver(){
+//        inProgress.explorerIsOnA();
+        return inProgress.explorerIsOnA() == Maze.TREASURE;
+        
         if (inProgress.explorerIsOnA() == Maze.TREASURE)
             return true;
         else if (inProgress.explorerIsOnA() == Maze.WALL)
@@ -29,11 +32,12 @@ public class MazeSolver{
                 inProgress.dropA(inProgress.WALL);
                 inProgress.go(dir);
                 if (inProgress.explorerIsOnA() == Maze.STEPPING_STONE){
-//                    System.out.println("step successful");
+                    System.out.println("step successful");
                     return solver();
                 }
                 inProgress = snapshot;
             }
         }
+        return false;
     }
 }
