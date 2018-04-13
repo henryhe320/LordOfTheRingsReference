@@ -28,14 +28,13 @@ public class MazeSolver{
             return false;
         else{
             for(int dir: directions) {
+                inProgress = snapshot;
                 Maze snapshot = new Maze(inProgress);
                 inProgress.dropA(inProgress.WALL);
                 inProgress.go(dir);
-                if (inProgress.explorerIsOnA() == Maze.STEPPING_STONE){
-                    System.out.println("step successful");
-                    return solver();
+                if (solver())
+                    return true;
                 }
-                inProgress = snapshot;
             }
         }
         return false;
