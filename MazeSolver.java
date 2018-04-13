@@ -34,12 +34,8 @@ public class MazeSolver{
                 if (solver())
                     return true;
                 inProgress = snapshot;
-<<<<<<< HEAD
-            
-=======
                 }
            return false;
->>>>>>> 5f068f19004d77292903e47300bd7da2ea0f1244
             }
         }
        
