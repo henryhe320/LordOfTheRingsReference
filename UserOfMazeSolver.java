@@ -16,7 +16,7 @@
  */
 
 public class UserOfMazeSolver {
-    // private static Displayer displayer;
+     private static Displayer displayer = new Displayer(24);
 
     public static void main(String[] commandLine)
        throws java.io.FileNotFoundException {
@@ -28,8 +28,10 @@ public class UserOfMazeSolver {
                             );
         
         MazeSolver testSolve =  new MazeSolver(test);
+           
+           displayer.atTopOfWindow(test + "step ");
         
-           testSolve.solver();
+//           testSolve.solver();
            
 
         if (testSolve.solver()){

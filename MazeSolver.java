@@ -14,7 +14,7 @@ public class MazeSolver{
     private static int[] directions;
 
     public MazeSolver(Maze maze){
-        Maze inProgress = new Maze(maze);
+        inProgress = new Maze(maze);
         directions = new int[] {Maze.NORTH, Maze.EAST, Maze.SOUTH, Maze.WEST};
     }
 
@@ -34,8 +34,12 @@ public class MazeSolver{
                 if (solver())
                     return true;
                 inProgress = snapshot;
+<<<<<<< HEAD
+            
+=======
                 }
            return false;
+>>>>>>> 5f068f19004d77292903e47300bd7da2ea0f1244
             }
         }
        
