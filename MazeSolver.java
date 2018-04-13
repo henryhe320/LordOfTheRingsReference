@@ -28,12 +28,12 @@ public class MazeSolver{
             return false;
         else{
             for(int dir: directions) {
-                inProgress = snapshot;
                 Maze snapshot = new Maze(inProgress);
                 inProgress.dropA(inProgress.WALL);
                 inProgress.go(dir);
                 if (solver())
                     return true;
+                inProgress = snapshot;
                 }
             }
         }
