@@ -35,8 +35,9 @@ public class MazeSolver{
                     return true;
                 inProgress = snapshot;
                 }
+           return false;
             }
         }
-        return false;
-    }
+       
+    
 }
