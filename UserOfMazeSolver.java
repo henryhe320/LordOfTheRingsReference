@@ -13,6 +13,9 @@
        java UserOfMazeSolver mazes/4cell_treasureWest.txt 0 1  # one step from treasure
  
        java UserOfMazeSolver mazes/intersection_treasureNorth.txt 1 0  # choice to make
+ 
+       java UserOfMazeSolver mazes/intersection_treasureNorth.txt 0 0  # dropped on a wall that's inside the maze
+
  */
 
 public class UserOfMazeSolver {

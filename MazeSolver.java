@@ -19,7 +19,7 @@ public class MazeSolver{
     }
 
     public static Boolean solver(){
-//        inProgress.explorerIsOnA();
+        System.out.println( inProgress.explorerIsOnA());
 //        return inProgress.explorerIsOnA() == Maze.TREASURE;
         
         if (inProgress.explorerIsOnA() == Maze.TREASURE)
