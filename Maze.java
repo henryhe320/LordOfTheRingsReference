@@ -33,7 +33,6 @@ public class Maze {
     private final static int MAX_RANKS = 64;
     private int rankCount;  // number of ranks in a constructed Maze
     
-    public int stepsTaken = 0;
     
     private Vector explorerPosition;  // see Vector inner class, below
 
@@ -166,7 +165,7 @@ public class Maze {
                 explorerPosition = explorerPosition.add( 1, 0);
                 break;
         }
-        stepsTaken++;
+
     }
 
 
