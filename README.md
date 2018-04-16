@@ -40,9 +40,12 @@ for each direction (N, E, S, W, in that order):
 
  * Class:Maze
  * 2D Maze Array
+ * number of steps taken
  * advance method (i.e go)
  * backtrack method (i.e copyconstructor and restoration of a snapshot)
  * toString method
+## version 1 update
+ * display number of steps taken to reach treasure if such a treasure exists, if not return -1
 ## version *n* wish list
 
  * display actual path
