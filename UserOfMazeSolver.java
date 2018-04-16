@@ -44,7 +44,7 @@ public class UserOfMazeSolver {
         }
       
         System.out.println("Testing stepsTaken:");
-        System.out.println("this path takes" + stepsTaken(); + " steps");
+        System.out.println("this path takes " + MazeSolver.stepsTaken() + " steps");
            
            
     }
