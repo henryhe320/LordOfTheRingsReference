@@ -42,6 +42,9 @@ public class UserOfMazeSolver {
         } else {
             System.out.println("maze has no solution");
         }
+      
+        System.out.println("Testing stepsTaken:");
+        System.out.println("this path takes" + stepsTaken(); + " steps");
            
            
     }
