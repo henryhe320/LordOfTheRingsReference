@@ -35,11 +35,13 @@ for each direction (N, E, S, W, in that order):
  * inProgress Maze Field
  * snapShot Maze Field
  * solver Method
+ * number of steps
  * toString()
 
 
  * Class:Maze
  * 2D Maze Array
+ * stepsTaken
  * advance method (i.e go)
  * backtrack method (i.e copyconstructor and restoration of a snapshot)
  * toString method
@@ -49,4 +51,4 @@ for each direction (N, E, S, W, in that order):
  * perhaps find multiple solutions
 
 ## known bugs
- * UserOfMazeSolver won't compile
+
