@@ -1,2 +1,4 @@
 [submodule "pd5/LordOfTheRingsReference"]
-	branch = v0
+	branch = v1
+[submodule "submoduleName"]
+	branch = branchName
