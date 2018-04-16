@@ -12,6 +12,8 @@ public class MazeSolver{
     private static Maze inProgress;
     
     private static int[] directions;
+  
+    private static int stepsTaken = 0;
 
     public MazeSolver(Maze maze){
         inProgress = new Maze(maze);
@@ -31,13 +33,23 @@ public class MazeSolver{
                 Maze snapshot = new Maze(inProgress);
                 inProgress.dropA(inProgress.WALL);
                 inProgress.go(dir);
+                stepsTaken++;
                 if (solver())
                     return true;
-                inProgress = snapshot;
+                else {inProgress = snapshot;
+                      stepsTaken--;
+                     }
                 }
            return false;
             }
-        }
+    }
+  
+   public static int stepsTaken(){
+       if (solver())
+           return stepsTaken;
+       else return -1;
+     
+   }
        
     
 }
